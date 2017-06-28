@@ -1,0 +1,17 @@
+<?php
+
+/**
+ *
+ * Router
+ *
+ */
+
+
+class Router
+{
+
+
+}
+
+
+?>
