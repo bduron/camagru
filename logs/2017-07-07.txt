@@ -1,0 +1,902 @@
+[07-Jul-2017 17:08:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for products'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('products')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 17:08:46 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for products2'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('products2')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 17:10:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for produt'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('produt')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 17:23:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for produt'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('produt')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 17:24:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method pouetAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('pouet', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/pouet')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:24:38 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method pouetAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('pouet', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/pouet')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:25:09 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for postewewe'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('postewewe')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 17:26:47 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for product'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 17:27:00 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:28:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:28:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:28:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:28:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:28:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:28:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:29:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method notexistAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('notexist', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/notexist')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 17:30:20 Europe/Berlin] Uncaught exception: 'Exception' with message 'No App\Controllers\Product class found'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product/esle')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 58
+[07-Jul-2017 17:34:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No App\Controllers\Product class found'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product/hello')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 58
+[07-Jul-2017 18:06:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No App\Controllers\Product class found'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product/hello')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 58
+[07-Jul-2017 18:06:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('404.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:07:34 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'include(../base.html): failed to open stream: No such file or directory'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): Core\Error::errorHandler(2, 'include(../base...', '/Applications/M...', 1, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): include()
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/Home/index.php' on line 1
+[07-Jul-2017 18:07:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:16:38 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:16:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:16:40 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:16:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:16:42 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:16:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:16:54 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:16:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:19:05 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:19:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:20:54 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:20:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:20:55 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:20:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:21:12 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.html(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.html' on line 5
+[07-Jul-2017 18:21:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:22:59 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:22:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:23:00 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:23:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:23:02 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:23:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:25:32 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:25:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:26:59 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:26:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:27:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:27:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 18:27:20 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 18:27:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:42:56 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:42:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:43:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for product'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 19:43:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('404.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:43:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No App\Controllers\Product class found'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product/esle')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 58
+[07-Jul-2017 19:43:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('404.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:50:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for product'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('product')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 19:50:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('404.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:50:31 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:50:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:56:27 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:56:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:56:28 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(2): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:56:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:57:30 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:57:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:57:30 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/App/Views/Home/index.php(1): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/Core/View.php(14): require('/Applications/M...')
+#3 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#4 [internal function]: App\Controllers\Home->indexAction()
+#5 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#6 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#7 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#8 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:57:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 16
+[07-Jul-2017 19:59:38 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:59:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 19:59:39 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 19:59:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:01:47 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:01:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:01:49 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:01:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:18 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:18 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:54 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:55 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:02:55 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:02:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:03:47 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:03:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:03:47 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:03:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:03:48 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:03:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:03:48 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:03:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:04:17 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:04:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:04:18 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:04:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:04:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:04:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:04:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:04:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 20:04:20 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable: title'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/App/Views/base.php(5): Core\Error::errorHandler(8, 'Undefined varia...', '/Applications/M...', 5, Array)
+#1 /Applications/MAMP/htdocs/camagru/Core/View.php(15): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/camagru/App/Controllers/Home.php(12): Core\View::render('Home/index.php', Array)
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Views/base.php' on line 5
+[07-Jul-2017 20:04:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Core\Exception' not found in /Applications/MAMP/htdocs/camagru/Core/View.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/camagru/Core/Error.php(41): Core\View::render('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/camagru/Core/View.php on line 19
+[07-Jul-2017 21:20:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for products'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('products')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 21:22:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route found for products'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('products')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 61
+[07-Jul-2017 21:22:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'No App\Controllers\Products class found'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('products/croote')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 58
+[07-Jul-2017 21:22:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method crooteAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('croote', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/croote')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[07-Jul-2017 21:31:03 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method edirAction not found in controller App\Controllers\Posts'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('edir', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('posts/123/edir')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26

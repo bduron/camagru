@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+use Core\View;
+use App\Models\Post;
+
+
 class Posts extends \Core\Controller
 {
 	
@@ -12,7 +16,8 @@ class Posts extends \Core\Controller
 	
 	public function indexAction()
 	{
-		echo 'Hello from the index function in the Posts Class <br>';
+		$posts = Post::getAll();
+		View::render('Posts/index.php', ['posts' => $posts]);
 	}
 
 	public function editAction()

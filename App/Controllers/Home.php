@@ -2,12 +2,14 @@
 
 namespace App\Controllers;
 
+use \Core\View;
+
 class Home extends \Core\Controller
 {
 	
 	public function indexAction()
 	{
-		echo 'Hello from the index function in the Home Class <br>';
+		View::render('Home/index.php', ['name' => 'Ben', 'colours' => ['red', 'green', 'blue']]);
 	}
 
 	protected function before()

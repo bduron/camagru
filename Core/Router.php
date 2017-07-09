@@ -41,7 +41,7 @@ class Router
 		{
 			$controller = $this->params['controller'];
 			$controller = $this->toStudlyCaps($controller);			
-			$controller = "App\Controllers\\$controller";
+			$controller = $this->getNamespace() . $controller;
 
 			if (class_exists($controller))
 			{
@@ -52,13 +52,13 @@ class Router
 				if (is_callable([$controller_obj, $action]))
 					$controller_obj->$action(); 
 				else
-					echo 'No ' . $action . ' method found in ' . $controller . '<br>';
+					throw new \Exception('No ' . $action . ' method found in ' . $controller, 404);
 			}
 			else 
-				echo 'No ' . $controller . ' class found<br>';
+				throw new \Exception('No ' . $controller . ' class found', 404);
 		}
 		else 
-			echo 'No route found for ' . $url . '<br>';
+			throw new \Exception('No route found for ' . $url, 404);
 	}
 	
 	protected function removeQueryStringVars($url)
@@ -82,6 +82,15 @@ class Router
 	public function toCamelCase($str)
 	{
 		return lcfirst($this->toStudlyCaps($str));
+	}	
+
+	public function getNamespace()
+	{
+		$namespace = 'App\Controllers\\';		
+
+		if (array_key_exists('namespace', $this->params))
+			$namespace .= $this->params['namespace'] . '\\';	
+		return $namespace;
 	}	
 
 	public function getRoutes()
