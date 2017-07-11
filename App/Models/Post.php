@@ -1,27 +1,27 @@
 <?php
 
-namespace App\Models;
+namespace app\models;
 
-use PDO;
+use pdo;
 
-class Post extends \Core\Model
+class post extends \core\model
 {
 
-	public static function getAll()
+	public static function getall()
 	{
 
 		try 
 		{
-			$db = static::getDB();		
+			$db = static::getdb();		
 
-			$stmt = $db->query('SELECT id, title, content FROM posts ORDER BY created_at');
-			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$stmt = $db->query('select id, title, content from posts order by created_at');
+			$results = $stmt->fetchall(pdo::fetch_assoc);
 			
 			return $results;
 		}
-		catch (PDOException $e)
+		catch (pdoexception $e)
 		{
-			echo $e->getMessage();
+			echo $e->getmessage();
 		}
 	}
 

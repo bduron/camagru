@@ -6,9 +6,12 @@
 </head
 <body>
 	<?php require '../App/Views/Partials/nav.php'; ?>
-	<h1>Titre 1</h1>
-	<p>Hello from the Home view!</p> 
-	<?php echo "Welcome back $name, your favorite color is $colours[1]"; ?>
+	<h1>Camagru</h1>
+		<?php  if(\App\Auth::isLoggedIn()): ?>
+			<p>Hello user_id : <?= $_SESSION['user_id'] ?>. <a href="/logout">Log out</a> </p>
+		<?php else: ?>
+			<p>Welcome to the funniest photo editor of the Web</p> 
+		<?php  endif;?>
 	<?php require '../App/Views/Partials/footer.php'; ?>
 </body>
 </html>

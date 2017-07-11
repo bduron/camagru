@@ -17,7 +17,7 @@ abstract class Model
 			{
 				$dsn = 'mysql:host=' . Config::DB_HOST . ';dbname=' . Config::DB_NAME . ';charset=utf8'; 
 				$db = new PDO($dsn, Config::DB_USER, Config::DB_PASSWD);		
-				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ATTR_EXCEPTION);	
+				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
 			}
 			catch (PDOException $e)
 			{

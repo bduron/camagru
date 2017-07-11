@@ -1,0 +1,28 @@
+[10-Jul-2017 08:41:05 Europe/Berlin] Uncaught exception: 'Exception' with message 'No App\Controllers\Singup class found'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('singup/new')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Router.php' on line 58
+[10-Jul-2017 08:41:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method newAction not found in controller App\Controllers\Signup'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('new', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('signup/new')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[10-Jul-2017 08:42:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method indexAction not found in controller App\Controllers\Signup'
+Stack trace: #0 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('index', Array)
+#1 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('signup/index')
+#2 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/Core/Controller.php' on line 26
+[10-Jul-2017 09:12:10 Europe/Berlin] Uncaught exception: 'Error' with message 'Class 'App\Controllers\User' not found'
+Stack trace: #0 [internal function]: App\Controllers\Signup->createAction()
+#1 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('create', Array)
+#3 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('signup/create')
+#4 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Controllers/Signup.php' on line 17
+[10-Jul-2017 09:12:19 Europe/Berlin] Uncaught exception: 'Error' with message 'Class 'App\Controllers\User' not found'
+Stack trace: #0 [internal function]: App\Controllers\Signup->createAction()
+#1 /Applications/MAMP/htdocs/camagru/Core/Controller.php(21): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/camagru/Core/Router.php(53): Core\Controller->__call('create', Array)
+#3 /Applications/MAMP/htdocs/camagru/public/index.php(45): Core\Router->dispatch('signup/create')
+#4 {main}
+Thrown in '/Applications/MAMP/htdocs/camagru/App/Controllers/Signup.php' on line 17
