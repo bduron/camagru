@@ -6,6 +6,7 @@
 </head
 <body>
 	<?php require '../App/Views/Partials/nav.php'; ?>
+	<?php require '../App/Views/Partials/flash.php'; ?>
 
 	<h1>Login</h1>
 

@@ -3,6 +3,7 @@
 namespace Core;
 
 use \App\Auth;
+use \App\Flash;
 
 abstract class Controller
 {
@@ -18,7 +19,7 @@ abstract class Controller
 		$method = $name . 'Action';
 		if (method_exists($this, $method))
 		{
-			if ($this->before())
+			if ($this->before() !== false)
 			{
 				call_user_func_array([$this, $method], $args);
 				$this->after();
@@ -33,6 +34,16 @@ abstract class Controller
 	{
 		header('Location : http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);
 		exit();	
+	}		
+
+	public function requireLogin()
+	{
+		if (!Auth::isLoggedIn()) 	
+		{
+			Flash::addMessage('Please login to access this page');	
+			Auth::rememberRequestedPage();
+			$this->redirect('/login');
+		}
 	}		
 
 	protected function before()

@@ -101,6 +101,20 @@ class User extends \Core\Model
 		return $stmt->fetch();	
 	}
 
+	public static function findById($id)
+	{
+		$sql = "SELECT * FROM users WHERE id = :id";
+
+		$db = static::getDB();
+		$stmt = $db->prepare($sql);
+		$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+		$stmt->execute();	
+
+		$stmt->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+
+		return $stmt->fetch();	
+	}
+
 	public static function authenticate($name, $password)
 	{
 		$user = static::findByName($name);
