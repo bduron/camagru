@@ -8,7 +8,7 @@ class View
 	{
 		extract($args, EXTR_SKIP);	
 	
-		$file = "../App/Views/$view";	
+		$file = "App/Views/$view";	
 		
 		if (is_readable($file))
 		{

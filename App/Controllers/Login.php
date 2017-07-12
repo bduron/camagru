@@ -18,17 +18,19 @@ class Login extends \Core\Controller
 	public function createAction()
 	{
 		$user = User::authenticate($_POST['name'], $_POST['password']);
+		$remember_me = (isset($_POST['remember_me'])) ? "checked=\"checked\"" : "";
 
 		if ($user)
 		{		
-			Auth::login($user);
+			Auth::login($user, $remember_me != "");
 			Flash::addMessage('Login successful');	
 			$this->redirect(Auth::getReturnToPage());
 		}
 		else 
 		{
 			Flash::addMessage('Your username or password is invalid', Flash::WARNING);	
-			View::render('Login/new.php', ['name' => $_POST['name']]);
+			View::render('Login/new.php', 
+				['name' => $_POST['name'], 'remember_me' => $remember_me]);
 		}
 	}
 

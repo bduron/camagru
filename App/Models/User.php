@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use PDO;
+use \App\Token;
 
 class User extends \Core\Model
 {
@@ -42,6 +43,9 @@ class User extends \Core\Model
 	{
 		if ($this->name == '')
 			$this->errors[] = "Name is required";	
+
+		if (strlen($this->name) > 50 )
+			$this->errors[] = "Username must be less than 50 characters";	
 
 		if ($this->nameExists($this->name))
 			$this->errors[]	= "This name is already taken";
@@ -124,6 +128,25 @@ class User extends \Core\Model
 				return $user;
 		return false;
 	}
+
+	public function rememberLogin()
+	{
+		$token = new Token();
+		$hashed_token = $token->getHash();
+		$expiry_timestamp = time() + 60 * 60 * 24 * 30;	
+
+		$sql = 'INSERT INTO remembered_logins (token_hash, user_id, expires_at)
+				VALUES (:token_hash, :user_id, :expires_at)';
+		$db = static::getDB();
+		$stmt = $db->prepare($sql);
+
+		$stmt->bindValue(':token_hash', $hashed_token, PDO::PARAM_STR);
+		$stmt->bindValue(':user_id', $this->id, PDO::PARAM_STR);
+		$stmt->bindValue(':expires_at', date('Y-m-d H:i:s', $expiry_timestamp), PDO::PARAM_STR);
+
+		$stmt->execute();
+	}
+
 
 }
 

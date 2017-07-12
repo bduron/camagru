@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php require '../App/Views/Partials/header.php'; ?>
+	<?php require 'App/Views/Partials/header.php'; ?>
     <title>Sign up</title>
 </head
 <body>
-	<?php require '../App/Views/Partials/nav.php'; ?>
+	<?php require 'App/Views/Partials/nav.php'; ?>
 
 	<h1>Sign up</h1>
 
@@ -41,6 +41,6 @@
 		<button type="submit">Sign up</button>
 	</form>
 
-	<?php require '../App/Views/Partials/footer.php'; ?>
+	<?php require 'App/Views/Partials/footer.php'; ?>
 </body>
 </html>

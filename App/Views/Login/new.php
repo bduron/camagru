@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php require '../App/Views/Partials/header.php'; ?>
+	<?php require 'App/Views/Partials/header.php'; ?>
     <title>Login</title>
 </head
 <body>
-	<?php require '../App/Views/Partials/nav.php'; ?>
-	<?php require '../App/Views/Partials/flash.php'; ?>
+	<?php require 'App/Views/Partials/nav.php'; ?>
+	<?php require 'App/Views/Partials/flash.php'; ?>
 
 	<h1>Login</h1>
 
@@ -30,9 +30,14 @@
 		        <label for="inputPassword">Password</label>
 		        <input id="inputPassword" type="password" name="password" placeholder="Password">
 		</div>
+		<div>
+			<label for="remember_me">
+				<input type="checkbox" name="remember_me" <?= $remember_me ?? "" ?> /> Remember me
+			</label>
+		</div>
 		<button type="submit">Log in</button>
 	</form>
 
-	<?php require '../App/Views/Partials/footer.php'; ?>
+	<?php require 'App/Views/Partials/footer.php'; ?>
 </body>
 </html>
