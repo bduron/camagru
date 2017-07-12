@@ -6,6 +6,7 @@
 </head
 <body>
 	<?php require '../App/Views/Partials/nav.php'; ?>
+	<?php require '../App/Views/Partials/flash.php'; ?>
 	<h1>Camagru</h1>
 		<?php  if(\App\Auth::isLoggedIn()): ?>
 			<p>Hello <?= $user->name ?>. <a href="/logout">Log out</a> </p>

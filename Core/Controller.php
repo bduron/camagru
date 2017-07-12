@@ -40,7 +40,7 @@ abstract class Controller
 	{
 		if (!Auth::isLoggedIn()) 	
 		{
-			Flash::addMessage('Please login to access this page');	
+			Flash::addMessage('Please login to access this page - Info', Flash::INFO);	
 			Auth::rememberRequestedPage();
 			$this->redirect('/login');
 		}
