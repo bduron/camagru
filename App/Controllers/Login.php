@@ -46,6 +46,16 @@ class Login extends \Core\Controller
 		$this->redirect('/');
 	}
 
+//	public function sendmailAction()
+//	{	
+//	   	$to      = 'news.benjamin@gmail.com';
+//		$subject = 'le sujet';
+//		$message = '<h1>Bonjour !</h1><p>Un paragraphe</p>';
+//		\App\Mail::send($to, $subject, $message);
+//		echo 'Mail sent';
+//	}
+
+
 	protected function before()
 	{
 		return true;

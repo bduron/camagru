@@ -36,6 +36,7 @@
 			</label>
 		</div>
 		<button type="submit">Log in</button>
+		<a href="/password/forgot">Forgot password ?</a>
 	</form>
 
 	<?php require 'App/Views/Partials/footer.php'; ?>
