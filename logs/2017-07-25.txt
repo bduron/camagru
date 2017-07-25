@@ -1,0 +1,4 @@
+[25-Jul-2017 07:55:44 UTC] Uncaught exception: 'Exception' with message 'No route found for password/reset/690d7df880bcb05725479afba5d882b5aqq'
+Stack trace: #0 /Users/bduron/http/MyWebSite/index.php(45): Core\Router->dispatch('password/reset/...')
+#1 {main}
+Thrown in '/Users/bduron/http/MyWebSite/Core/Router.php' on line 61

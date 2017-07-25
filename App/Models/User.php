@@ -25,8 +25,12 @@ class User extends \Core\Model
 		{		
 			$password_hash = password_hash($this->password, PASSWORD_DEFAULT);
 				
-			$sql = "INSERT INTO users (name, email, password_hash)
-					VALUES (:name, :email, :password_hash)";
+			$token = new Token();
+			$hashed_token = $token->getHash();
+			$this->activation_token = $token->getValue();
+
+			$sql = "INSERT INTO users (name, email, password_hash, activation_hash)
+					VALUES (:name, :email, :password_hash, :activation_hash)";
 
 			$db = static::getDB();
 			$stmt = $db->prepare($sql);
@@ -34,6 +38,7 @@ class User extends \Core\Model
 			$stmt->bindValue(':name', $this->name, PDO::PARAM_STR);
 			$stmt->bindValue(':email', $this->email, PDO::PARAM_STR);
 			$stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
+			$stmt->bindValue(':activation_hash', $hashed_token, PDO::PARAM_STR);
 
 			return $stmt->execute();
 		}
@@ -48,13 +53,13 @@ class User extends \Core\Model
 		if (strlen($this->name) > 50 )
 			$this->errors[] = "Username must be less than 50 characters";	
 
-		if ($this->nameExists($this->name))
+		if ($this->nameExists($this->name, $this->id ?? null))
 			$this->errors[]	= "This name is already taken";
 	
 		if (filter_var($this->email, FILTER_VALIDATE_EMAIL) === false)
 			$this->errors[] = "Invalid email format";	
 
-		if (static::emailExists($this->email))
+		if (static::emailExists($this->email, $this->id ?? null))
 			$this->errors[]	= "This email is already registered";
 
 		if (strlen($this->password) < 6)
@@ -70,9 +75,14 @@ class User extends \Core\Model
 			$this->errors[]	= "Passwords don't match";
 	}			
 
-	public static function emailExists($email)
+	public static function emailExists($email, $ignore_id = null)
 	{
-		return static::findByEmail($email) !== false;
+		$user = static::findByEmail($email);
+		if ($user)
+			if ($user->id != $ignore_id)
+				return true;
+		return false;
+
 	}
 
 	public static function findByEmail($email)
@@ -84,12 +94,18 @@ class User extends \Core\Model
 		$stmt->bindValue(':email', $email, PDO::PARAM_STR);
 		$stmt->execute();	
 
+		$stmt->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+
 		return $stmt->fetch();	
 	}
 
-	public static function nameExists($name)
+	public static function nameExists($name, $ignore_id = null)
 	{
-		return static::findByName($name) !== false;
+		$user = static::findByName($name);
+		if ($user)
+			if ($user->id != $ignore_id)
+				return true;
+		return false;
 	}
 
 	public static function findByName($name)
@@ -153,7 +169,7 @@ class User extends \Core\Model
 	public static function sendPasswordReset($email)
 	{
 		$user = static::findByEmail($email);	
-		$user = static::findById($user['id']);	
+		$user = static::findById($user->id);	
 
 		if ($user)
 		{
@@ -189,6 +205,63 @@ class User extends \Core\Model
 		$html = "Please click <a href=\"$url\">here</a> to reset your password.";
 		
 		Mail::send($this->email, 'Camagru Password reset', $html);
+	
+	}
+
+	public static function findByPasswordReset($token)
+	{
+		$token = new Token($token);
+		$hashed_token = $token->getHash();
+
+		$sql = "SELECT * FROM users WHERE password_reset_hash = :token_hash";
+
+		$db = static::getDB();
+		$stmt = $db->prepare($sql);
+		$stmt->bindValue(':token_hash', $hashed_token, PDO::PARAM_STR);
+		$stmt->execute();	
+
+		$stmt->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+
+		$user = $stmt->fetch();	
+
+		if ($user)	
+			if (strtotime($user->password_reset_expires_at) > time())
+		   		return $user;	
+
+	}
+
+	public function resetPassword($password, $password_confirm)
+	{
+		$this->password = $password;
+		$this->password_confirm = $password_confirm;
+
+		$this->validate();
+	
+		if (empty($this->errors))
+		{
+			$password_hash = password_hash($this->password, PASSWORD_DEFAULT);	
+		
+			$sql = 'UPDATE users 
+					SET password_hash = :password_hash,
+						password_reset_hash = NULL,
+						password_reset_expires_at = NULL
+					WHERE id = :id';
+			
+			$db = static::getDB();
+			$stmt = $db->prepare($sql);
+			$stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
+			$stmt->bindValue(':id', $this->$id, PDO::PARAM_INT);
+			return $stmt->execute();	
+		}
+		return false;
+	}
+
+	public function sendActivationEmail()
+	{	
+		$url = 'http://' . $_SERVER['HTTP_HOST'] . '/signup/activate/' . $this->activation_token;
+		$html = "Please click <a href=\"$url\">here</a> to confirm your registration.";
+		
+		Mail::send($this->email, 'Camagru - Confirm your account', $html);
 	
 	}
 
