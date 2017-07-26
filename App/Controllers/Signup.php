@@ -30,6 +30,17 @@ class Signup extends \Core\Controller
 		View::render('Signup/success.php');
 	}
 
+	public function activateAction()
+	{
+		User::activate($this->route_params['token']);
+		$this->redirect('/signup/activated');
+	}
+
+	public function activatedAction()
+	{
+		View::render('Signup/activated.php');
+	}
+
 	protected function before()
 	{
 		return true;

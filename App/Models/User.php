@@ -140,7 +140,7 @@ class User extends \Core\Model
 	{
 		$user = static::findByName($name);
 		
-		if ($user)
+		if ($user && $user->is_active)
 			if (password_verify($password, $user->password_hash))
 				return $user;
 		return false;
@@ -250,7 +250,7 @@ class User extends \Core\Model
 			$db = static::getDB();
 			$stmt = $db->prepare($sql);
 			$stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
-			$stmt->bindValue(':id', $this->$id, PDO::PARAM_INT);
+			$stmt->bindValue(':id', $this->id, PDO::PARAM_INT);
 			return $stmt->execute();	
 		}
 		return false;
@@ -265,6 +265,20 @@ class User extends \Core\Model
 	
 	}
 
+	public static function activate($token)
+	{
+		$token = new Token($token);
+		$hashed_token = $token->getHash();	
+
+		$sql = 'UPDATE users
+				SET activation_hash = null, is_active = 1
+				WHERE activation_hash = :hashed_token';	
+		
+		$db = static::getDB();
+		$stmt = $db->prepare($sql);
+		$stmt->bindValue(':hashed_token', $hashed_token, PDO::PARAM_STR);
+		$stmt->execute();	
+	}
 }
 
 ?>
