@@ -37,7 +37,8 @@ $router->add('login', ['controller' => 'Login', 'action' => 'new']);
 $router->add('logout', ['controller' => 'Login', 'action' => 'destroy']);
 $router->add('password/reset/{token:[a-f0-9]+}', ['controller' => 'Password', 'action' => 'reset']);
 $router->add('signup/activate/{token:[a-f0-9]+}', ['controller' => 'Signup', 'action' => 'activate']);
-//$router->add('{controller}/{id:\d+}/{action}');
+$router->add('montage', ['controller' => 'Montage', 'action' => 'index']);
+
 //$router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 
 
