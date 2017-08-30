@@ -2,44 +2,42 @@
 <html lang="en">
 <head>
 	<?php require 'App/Views/Partials/header.php'; ?>
-    <title>Take a picture</title>
+	<link rel="stylesheet" href="/public/css/montage.css">
+	<title>Take a picture</title>
 </head
 <body>
 	<?php require 'App/Views/Partials/nav.php'; ?>
 	<?php require 'App/Views/Partials/flash.php'; ?>
+
 	<h1>Take a new picture</h1>
 
-	<video id="video" width="640" height="480" autoplay></video>
-	<button id="snap">Snap Photo</button>
-	<canvas id="canvas" width="640" height="480"></canvas>
+	<div class="container">
+  		<div class="app">
+
+  		  <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+  		  <video id="camera-stream"></video>
+  		  <img id="snap">
+
+  		  <p id="error-message"></p>
+
+  		  <div class="controls">
+  		    <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">clear</i></a>
+  		    <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+  		    <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">done</i></a>  
+  		  </div>
+		
+		<!-- <img id="pirate" src="/public/img/pirate_eye_patch.png" alt="Pirate eye patch"> -->
+
+  		  <!-- Hidden canvas element. Used for taking snapshot of video. -->
+  		  <canvas></canvas>
+
+  		</div>
+	</div>	
+
+	<img src="image.php">
+
 
 	<?php require 'App/Views/Partials/footer.php'; ?>
-
-	<script>
-		// Grab elements, create settings, etc.
- 		var video = document.getElementById('video');
-
-		// Get access to the camera!
-		if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia)
-		{
-     		// Not adding `{ audio: true }` since we only want video now
-			navigator.mediaDevices.getUserMedia({ video: true }).then( function(stream) {
-                 video.src = window.URL.createObjectURL(stream);
-                 video.play(); });
-        }	
-	</script>
-
-	<script>
-		// Elements for taking the snapshot
-		var canvas = document.getElementById('canvas');
-		var context = canvas.getContext('2d');
-		var video = document.getElementById('video');
-		
-		// Trigger photo take
-		document.getElementById("snap").addEventListener("click", function() {
-			context.drawImage(video, 0, 0, 640, 480);
-			});
-	</script>
-
+	<script src="/public/js/montage.js"></script>
 </body>
 </html>
