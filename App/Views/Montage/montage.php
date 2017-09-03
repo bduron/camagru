@@ -11,6 +11,7 @@
 
 	<h1>Take a new picture</h1>
 
+
 	<div class="container">
   		<div class="app">
 
@@ -26,16 +27,17 @@
   		    <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">done</i></a>  
   		  </div>
 		
-		<!-- <img id="pirate" src="/public/img/pirate_eye_patch.png" alt="Pirate eye patch"> -->
+
 
   		  <!-- Hidden canvas element. Used for taking snapshot of video. -->
   		  <canvas></canvas>
-
   		</div>
+		<div>	
+			<?php foreach ($filters as $filter): ?>
+				<img src="public/img/<?= basename($filter) ?>" alt="Glasses" width="100px">
+			<?php endforeach; ?>
+		</div>	
 	</div>	
-
-	<img src="image.php">
-
 
 	<?php require 'App/Views/Partials/footer.php'; ?>
 	<script src="/public/js/montage.js"></script>

@@ -14,7 +14,9 @@ class Montage extends Authenticated
 		// get all users pictures 
 		// get all filters 
 		//
-		View::render('Montage/montage.php');
+		$curdir = getcwd() . '/public/img/';	
+		$filters = glob($curdir . "*.png");
+		View::render('Montage/montage.php', ['filters' => $filters]);
 	}
 
 
