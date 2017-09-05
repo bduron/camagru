@@ -7,8 +7,6 @@ var video = document.querySelector('#camera-stream'),
 	delete_photo_btn = document.querySelector('#delete-photo'),
 	download_photo_btn = document.querySelector('#download-photo'),
 	error_message = document.querySelector('#error-message');
-	upload_status = document.querySelector('#upload-status');
-	canvas = document.querySelector('canvas');
 
 
 // The getUserMedia interface is used for handling camera input.
@@ -81,7 +79,7 @@ take_photo_btn.addEventListener("click", function(e){
 		download_photo_btn.classList.remove("disabled");
 
 		// Set the href attribute of the download button to the snap url.
-//		download_photo_btn.href = snap;
+		download_photo_btn.href = snap;
 
 		// Pause video playback of stream.
 		video.pause();
@@ -89,41 +87,6 @@ take_photo_btn.addEventListener("click", function(e){
 });
 
 download_photo_btn.addEventListener("click", function(e) {
-
-	// Create a new FormData object.
-	var form_data = new FormData();	
-
-	// Create photo blob
-	canvas.toBlob(function(blob) {
-		var	photo_blob = blob;
-		
-		form_data.append('photo', photo_blob, 'photo.png');
-
-		// Set up Ajax request 
-		var request = new XMLHttpRequest();
-		
-		// Open the connection
-		request.open('POST', 'montage/upload', true);
-
-		// Set up a handler for when the request finishes
-		request.onload = function () {
-			if (request.status === 200) 
-			{
-		    	alert('Photo uploaded to the server');
-				console.log(request.responseText);
-			}
-			else 
-		    	alert('An error occurred!');
-		};	
-
-		// Send the Data.
-		request.send(form_data);
-
-	//	console.log(photo_blob);
-
-	});
-
-
 
 });
 

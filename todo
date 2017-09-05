@@ -1,7 +1,26 @@
 # Camagru To Do
 
+## Montage
+
+Preview 
+[ ] selection des filtres en JS
+[ ] supperposition des filtres en JS
+
+Validation photo
+[ ] envoi du filtre
+[ ] montage filtre + photo
+[ ] enregistrement photo dans BDD user 
+[ ] mise a jour de la galerie des photos prises  
+
+
+
+
 
 ## input validation
 [ ] implement ajax client-side form validation 
 	See (HTLM5 Constraint validation API : https://medium.com/the-ui-files/form-validation-with-javascript-4fcf4dd32846)
 [ ] add single password confirmation (show password)
+
+
+
+

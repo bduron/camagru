@@ -24,7 +24,8 @@
   		  <div class="controls">
   		    <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">clear</i></a>
   		    <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
-  		    <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">done</i></a>  
+  		    <a href="#" id="download-photo" title="Save Photo" class="disabled"><i class="material-icons">done</i></a>  
+  		    <!-- <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">done</i></a> --> 
   		  </div>
 		
 
