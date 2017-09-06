@@ -9,6 +9,10 @@ var video = document.querySelector('#camera-stream'),
 	error_message = document.querySelector('#error-message');
 	upload_status = document.querySelector('#upload-status');
 	canvas = document.querySelector('canvas');
+	filters = document.querySelector('.filter');
+	default_filter = document.querySelector('.filter>img');
+	overlay_filter = document.querySelector('#overlay-filter');
+    image_loader = document.querySelector('#image-loader');
 
 
 // The getUserMedia interface is used for handling camera input.
@@ -80,9 +84,6 @@ take_photo_btn.addEventListener("click", function(e){
 		delete_photo_btn.classList.remove("disabled");
 		download_photo_btn.classList.remove("disabled");
 
-		// Set the href attribute of the download button to the snap url.
-//		download_photo_btn.href = snap;
-
 		// Pause video playback of stream.
 		video.pause();
 
@@ -96,8 +97,10 @@ download_photo_btn.addEventListener("click", function(e) {
 	// Create photo blob
 	canvas.toBlob(function(blob) {
 		var	photo_blob = blob;
-		
+		var current_filter_id = document.querySelector('.filter>img.selected-filter').id;
+
 		form_data.append('photo', photo_blob, 'photo.png');
+		form_data.append('filter_id', current_filter_id);
 
 		// Set up Ajax request 
 		var request = new XMLHttpRequest();
@@ -146,6 +149,67 @@ delete_photo_btn.addEventListener("click", function(e){
 });
 
 
+// Activate the default filter 
+default_filter.setAttribute('class', "selected-filter");
+overlay_filter.setAttribute('src', document.querySelector('.filter>img.selected-filter').src);
+
+
+filters.addEventListener("click", function(e){
+
+		e.preventDefault();
+		
+		console.log(e.target);
+		if (e.target.nodeName == 'IMG' && download_photo_btn.className == "disabled")
+		{	
+			var current_filter = document.querySelector('.filter>img.selected-filter');
+			current_filter.classList.remove("selected-filter");
+			var image = e.target;
+			image.setAttribute('class', "selected-filter");
+			var overlay = document.querySelector('.filter>img.selected-filter').src;
+			overlay_filter.setAttribute('src', overlay);
+			//overlay_filter.image.classList.add("visible");
+		}
+
+	//download_photo_btn.classList.add("disabled");
+});
+
+
+// Custom photo upload
+/*
+image_loader.addEventListener('change', function(e) {
+
+	snap.src = URL.createObjectURL(e.target.files[0]);
+	console.log(snap);
+	console.log(URL.createObjectURL(e.target.files[0]));
+
+	// Show image. 
+	image.setAttribute('src', snap);
+	image.classList.add("visible");
+
+	// Enable delete and save buttons
+	delete_photo_btn.classList.remove("disabled");
+	download_photo_btn.classList.remove("disabled");
+
+	// Pause video playback of stream.
+	video.pause();
+
+});
+
+*/
+
+var loadFile = function(event) {
+    var output = document.getElementById('snap');
+    output.src = URL.createObjectURL(event.target.files[0]);
+
+	output.classList.add("visible");
+
+	// Enable delete and save buttons
+	delete_photo_btn.classList.remove("disabled");
+	download_photo_btn.classList.remove("disabled");
+
+	// Pause video playback of stream.
+	video.pause();
+};
 
 function showVideo(){
 		// Display the video stream and the controls.

@@ -2,12 +2,18 @@
 
 ## Montage
 
+today
+[ ] trouver pourquoi on peut appuyer 2x sur le bouton snap
+
+Upload manuel
+[ ] ajouter l'upload dans le html 
+
 Preview 
-[ ] selection des filtres en JS
-[ ] supperposition des filtres en JS
+[x] selection des filtres en JS
+[x] supperposition des filtres en JS
 
 Validation photo
-[ ] envoi du filtre
+[x] envoi du filtre
 [ ] montage filtre + photo
 [ ] enregistrement photo dans BDD user 
 [ ] mise a jour de la galerie des photos prises  

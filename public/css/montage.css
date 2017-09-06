@@ -20,9 +20,9 @@ h3{
 		text-align: center;
 }
 
-.container{
+.container, #image-upload{
 		max-width: 720px;
-		margin: 50px auto;
+		margin: 30px auto;
 		padding: 20px;
 		background-color: #efefef;
 }
@@ -176,4 +176,36 @@ h3{
 		.app .controls #take-photo i{
 				font-size: 18px;
 		}
+}
+
+.selected-filter {
+	background-color: white;
+}
+
+
+.app img#overlay-filter{
+		position: absolute;
+		top: 50%;
+		left: 60%;
+		width: 20%;
+		z-index: 10;
+		transform: rotate(15deg);
+}
+
+video, img {
+	transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+	-moz-transform:rotateY(180deg); /* Firefox */
+}
+
+.filter>img {
+	margin-top: 25px;
+	margin-right: 4px;
+	padding: 4px;
+	width: 7%;
+	border-radius: 100%;
+}
+
+#image-upload{
+	max-width: 360px;
 }

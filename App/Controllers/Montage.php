@@ -23,6 +23,7 @@ class Montage extends Authenticated
 	{
 		echo "<p>File uploaded on server</p>";
 		var_dump($_FILES);
+		var_dump($_POST);
 
 		$this->saveRawPhoto();
 	}
