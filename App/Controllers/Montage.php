@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use \Core\View;
-//use \App\Models\User;
+use \App\Models\Image;
 
 class Montage extends Authenticated
 {
@@ -25,47 +25,9 @@ class Montage extends Authenticated
 		var_dump($_FILES);
 		var_dump($_POST);
 
-		$this->saveRawPhoto();
+		Image::savePhoto();
 	}
 
-	private function saveRawPhoto()
-	{
-		define("UPLOAD_DIR", getcwd() . "/uploads/");
-
-		if (!empty($_FILES["photo"]))
-		{
-			$photo = $_FILES["photo"];
-
-			if ($photo["error"] !== UPLOAD_ERR_OK)
-			{
-				echo "<p>An error occurred.</p>";
-				exit;
-			}
-
-			// ensure a safe filename
-			$name = preg_replace("/[^A-Z0-9._-]/i", "_", $photo["name"]);
-
-			// don't overwrite an existing file
-			$i = 0;
-			$parts = pathinfo($name);
-			while (file_exists(UPLOAD_DIR . $name))
-			{
-				$i++;
-				$name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
-			}
-
-			// preserve file from temporary directory
-			$success = move_uploaded_file($photo["tmp_name"], UPLOAD_DIR . $name);
-			if (!$success) 
-			{ 
-				echo "<p>Unable to save file.</p>";
-				exit;
-			}
-
-			// set proper permissions on the new file
-			chmod(UPLOAD_DIR . $name, 0644);
-		}
-	}
 
 }
 ?>

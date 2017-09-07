@@ -3,10 +3,12 @@
 ## Montage
 
 today
-[ ] trouver pourquoi on peut appuyer 2x sur le bouton snap
+[x] trouver pourquoi on peut appuyer 2x sur le bouton snap
 
 Upload manuel
-[ ] ajouter l'upload dans le html 
+[x] ajouter l'upload dans le html 
+[ ] valider les images uploadées
+[ ] resizer les images 
 
 Preview 
 [x] selection des filtres en JS
