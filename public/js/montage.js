@@ -6,13 +6,14 @@ var video = document.querySelector('#camera-stream'),
 	take_photo_btn = document.querySelector('#take-photo'),
 	delete_photo_btn = document.querySelector('#delete-photo'),
 	download_photo_btn = document.querySelector('#download-photo'),
-	error_message = document.querySelector('#error-message');
-	upload_status = document.querySelector('#upload-status');
-	canvas = document.querySelector('canvas');
-	filters = document.querySelector('.filter');
-	default_filter = document.querySelector('.filter>img');
-	overlay_filter = document.querySelector('#overlay-filter');
-    image_loader = document.querySelector('#image-loader');
+	error_message = document.querySelector('#error-message'),
+	upload_status = document.querySelector('#upload-status'),
+	canvas = document.querySelector('canvas'),
+	filters = document.querySelector('.filter'),
+	default_filter = document.querySelector('.filter>img'),
+	overlay_filter = document.querySelector('#overlay-filter'),
+    image_loader = document.querySelector('#image-loader'),
+	current_blob = 0;
 
 
 // The getUserMedia interface is used for handling camera input.
@@ -74,10 +75,11 @@ take_photo_btn.addEventListener("click", function(e){
 
 		e.preventDefault();
 
-		var snap = takeSnapshot();
+		//var snap = takeSnapshotBlob();
+		takeSnapshotBlob();
 
 		// Show image. 
-		image.setAttribute('src', snap);
+		//image.setAttribute('src', snap);
 		image.classList.add("visible");
 
 		// Enable delete and save buttons
@@ -95,39 +97,34 @@ download_photo_btn.addEventListener("click", function(e) {
 	var form_data = new FormData();	
 
 	// Create photo blob
-	canvas.toBlob(function(blob) {
-		var	photo_blob = blob;
-		var current_filter_id = document.querySelector('.filter>img.selected-filter').id;
+	console.log(image.src);
+	var	photo_blob = current_blob;
+	var current_filter_id = document.querySelector('.filter>img.selected-filter').id;
 
-		form_data.append('photo', photo_blob, 'photo.png');
-		form_data.append('filter_id', current_filter_id);
+	form_data.append('photo', photo_blob, 'photo.png');
+	form_data.append('filter_id', current_filter_id);
 
-		// Set up Ajax request 
-		var request = new XMLHttpRequest();
-		
-		// Open the connection
-		request.open('POST', 'montage/upload', true);
+	// Set up Ajax request 
+	var request = new XMLHttpRequest();
+	
+	// Open the connection
+	request.open('POST', 'montage/upload', true);
 
-		// Set up a handler for when the request finishes
-		request.onload = function () {
-			if (request.status === 200) 
-			{
-		    	alert('Photo uploaded to the server');
-				console.log(request.responseText);
-			}
-			else 
-		    	alert('An error occurred!');
-		};	
+	// Set up a handler for when the request finishes
+	request.onload = function () {
+		if (request.status === 200) 
+		{
+			alert('Photo uploaded to the server');
+			console.log(request.responseText);
+		}
+		else 
+			alert('An error occurred!');
+	};	
 
-		// Send the Data.
-		request.send(form_data);
+	// Send the Data.
+	request.send(form_data);
 
 	//	console.log(photo_blob);
-
-	});
-
-
-
 });
 
 
@@ -174,41 +171,23 @@ filters.addEventListener("click", function(e){
 });
 
 
-// Custom photo upload
-/*
-image_loader.addEventListener('change', function(e) {
-
-	snap.src = URL.createObjectURL(e.target.files[0]);
-	console.log(snap);
-	console.log(URL.createObjectURL(e.target.files[0]));
-
-	// Show image. 
-	image.setAttribute('src', snap);
-	image.classList.add("visible");
-
-	// Enable delete and save buttons
-	delete_photo_btn.classList.remove("disabled");
-	download_photo_btn.classList.remove("disabled");
-
-	// Pause video playback of stream.
-	video.pause();
-
-});
-
-*/
-
 var loadFile = function(event) {
-    var output = document.getElementById('snap');
-    output.src = URL.createObjectURL(event.target.files[0]);
+	if (event.target.files[0])
+	{
+		var output = document.getElementById('snap');
+		current_blob = event.target.files[0];
+		output.src = URL.createObjectURL(event.target.files[0]);
 
-	output.classList.add("visible");
+		output.classList.add("visible");
 
-	// Enable delete and save buttons
-	delete_photo_btn.classList.remove("disabled");
-	download_photo_btn.classList.remove("disabled");
+		// Enable delete and save buttons
+		delete_photo_btn.classList.remove("disabled");
+		download_photo_btn.classList.remove("disabled");
 
-	// Pause video playback of stream.
-	video.pause();
+		// Pause video playback of stream.
+		video.pause();
+		controls.classList.add("visible"); // supprimer le take snapshot ?
+	}
 };
 
 function showVideo(){
@@ -219,8 +198,7 @@ function showVideo(){
 		controls.classList.add("visible");
 }
 
-
-function takeSnapshot(){
+function takeSnapshotBlob(){
 		// Here we're using a trick that involves a hidden canvas element.  
 
 		var hidden_canvas = document.querySelector('canvas'),
@@ -238,9 +216,14 @@ function takeSnapshot(){
 				// Make a copy of the current frame in the video on the canvas.
 				context.drawImage(video, 0, 0, width, height);
 
+				
+				hidden_canvas.toBlob(function(blob) {
+					current_blob = blob;
 
-				// Turn the canvas image into a dataURL that can be used as a src for our photo.
-				return hidden_canvas.toDataURL('image/png');
+					var url = URL.createObjectURL(blob);
+					var image = document.querySelector('#snap');
+					image.src = url;
+				});
 		}
 }
 
@@ -268,25 +251,3 @@ function hideUI(){
 		error_message.classList.remove("visible");
 }
 
-
-//// Grab elements, create settings, etc.
-//var video = document.getElementById('video');
-//
-//// Get access to the camera!
-//if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia)
-//{
-//		// Not adding `{ audio: true }` since we only want video now
-//		navigator.mediaDevices.getUserMedia({ video: true }).then( function(stream) {
-//				video.src = window.URL.createObjectURL(stream);
-//				video.play(); });
-//}	
-//
-//// Elements for taking the snapshot
-//var canvas = document.getElementById('canvas');
-//var context = canvas.getContext('2d');
-//var video = document.getElementById('video');
-//
-//// Trigger photo take
-//document.getElementById("snap").addEventListener("click", function() {
-//		context.drawImage(video, 0, 0, 640, 480);
-//});
