@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use \App\Auth;
 use PDO;
 
 class Image extends \Core\Model
@@ -10,6 +11,14 @@ class Image extends \Core\Model
 	{
 		self::saveRawPhoto();
 		self::addFilter();
+
+		$user = Auth::getUser();	
+		
+		//Save in BDD 
+		//Instanciate the object to get access to montage_src property 
+		//use the constructor 	
+			
+
 	}
 
 	private static function saveRawPhoto()
