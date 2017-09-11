@@ -2,7 +2,10 @@
 
 ## Montage
 
-today
+today 
+[ ] finaliser la requete ajax pour la suppression de la photo + delete le node de l'img supprimée 
+
+
 [x] trouver pourquoi on peut appuyer 2x sur le bouton snap
 
 Upload manuel
@@ -17,7 +20,7 @@ Preview
 Validation photo
 [x] envoi du filtre
 [x] montage filtre + photo
-[ ] enregistrement photo dans BDD user 
+[x] enregistrement photo dans BDD user 
 [ ] mise a jour de la galerie des photos prises  
 
 

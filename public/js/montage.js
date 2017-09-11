@@ -13,6 +13,7 @@ var video = document.querySelector('#camera-stream'),
 	default_filter = document.querySelector('.filter>img'),
 	overlay_filter = document.querySelector('#overlay-filter'),
     image_loader = document.querySelector('#image-loader'),
+	gallery_photo = document.querySelector('#user_photos>img'),
 	current_blob = 0;
 
 
@@ -115,7 +116,16 @@ download_photo_btn.addEventListener("click", function(e) {
 		if (request.status === 200) 
 		{
 			alert('Photo uploaded to the server');
-			console.log(request.responseText);
+			var img_src = request.responseText;
+			console.log(img_src); // Debug 
+			
+			var img_to_add = document.createElement("img");
+			img_to_add.src = img_src;
+
+			var img_dest = document.querySelector('#user_photos');
+			img_dest.appendChild(img_to_add);
+
+
 		}
 		else 
 			alert('An error occurred!');
@@ -124,7 +134,6 @@ download_photo_btn.addEventListener("click", function(e) {
 	// Send the Data.
 	request.send(form_data);
 
-	//	console.log(photo_blob);
 });
 
 
@@ -168,6 +177,32 @@ filters.addEventListener("click", function(e){
 		}
 
 	//download_photo_btn.classList.add("disabled");
+});
+
+
+
+gallery_photo.addEventListener("click", function(e){
+
+	e.preventDefault();
+	alert(e.target.src);		
+
+	// Set up Ajax request 
+	var request = new XMLHttpRequest();
+	
+	// Open the connection
+	request.open('POST', 'montage/delete', true);
+
+	request.onload = function () {
+		if (request.status === 200) 
+		{
+			alert('Photo deleted');
+			console.log(request.responseText);
+		}
+		else 
+			alert('An error occurred!');
+	request.send('src=photo-62');
+	}
+
 });
 
 
@@ -250,4 +285,5 @@ function hideUI(){
 		snap.classList.remove("visible");
 		error_message.classList.remove("visible");
 }
+
 

@@ -15,10 +15,22 @@ class Image extends \Core\Model
 		$user = Auth::getUser();	
 		
 		//Save in BDD 
+
+		$sql = "INSERT INTO images (src, user_id, created_at)
+				VALUES (:src, :user_id, :created_at)";
+
+		$db = static::getDB();
+		$stmt = $db->prepare($sql);
+
+		$stmt->bindValue(':src', basename($_FILES['photo']['tmp_name']), PDO::PARAM_STR);
+		$stmt->bindValue(':user_id', $user->id, PDO::PARAM_INT);
+		$stmt->bindValue(':created_at', date('Y-m-d H:i:s', time()), PDO::PARAM_STR);
+
+		return $stmt->execute();
+		
+
 		//Instanciate the object to get access to montage_src property 
 		//use the constructor 	
-			
-
 	}
 
 	private static function saveRawPhoto()
@@ -58,6 +70,10 @@ class Image extends \Core\Model
 
 			// set proper permissions on the new file
 			chmod(UPLOAD_DIR . $name, 0644);
+
+			// Save new photo Path
+			$_FILES['photo']['tmp_name'] = UPLOAD_DIR . $name;
+
 		}
 	}
 
@@ -89,12 +105,61 @@ class Image extends \Core\Model
 
 		// Output and free memory
 		//header('Content-type: image/png');
-		imagepng($im, getcwd() . "/uploads/montage.png");
+		imagepng($im, $_FILES['photo']['tmp_name']);
 		//imagedestroy($im);	
 			
 	}
 			
+	public static function getUserPhotos()
+	{
+		$user = Auth::getUser();
+	
+		$sql = "SELECT src FROM images WHERE user_id= :user_id ORDER BY created_at DESC;";
+		$db = static::getDB();
 
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':user_id', $user->id, PDO::PARAM_INT);
+		$stmt->execute();	
+
+		return $stmt->fetchAll();	
+	}
+	
+	public static function getIdFromName($name)
+	{
+		$sql = "SELECT id FROM images WHERE name = :name;";
+		$db = static::getDB();
+
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':name', $name, PDO::PARAM_STR); // Si doublon dans name image = probleme
+		$stmt->execute();	
+
+		return $stmt->fetch();	
+	}
+
+	public static function isUserPhoto($id)
+	{
+		$user = Auth::getUser();
+
+		$sql = "SELECT * FROM images WHERE user_id = :user_id AND id = :id;";
+		$db = static::getDB();
+
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':user_id', $user->id, PDO::PARAM_INT);
+		$stmt->bindvalue(':id', $id, PDO::PARAM_INT);
+		$stmt->execute();	
+
+		return (!empty($stmt->fetch()));
+	}
+
+	public static function deletePhoto($id)
+	{
+		$sql = "DELETE from images WHERE user_id = :id;";
+		$db = static::getDB();
+
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':id', $id, PDO::PARAM_INT);
+		$stmt->execute();	
+	}
 
 }
 

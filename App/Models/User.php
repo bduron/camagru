@@ -91,7 +91,7 @@ class User extends \Core\Model
 
 		$db = static::getDB();
 		$stmt = $db->prepare($sql);
-		$stmt->bindValue(':email', $email, PDO::PARAM_STR);
+		$stmt->bindvalue(':email', $email, pdo::param_str);
 		$stmt->execute();	
 
 		$stmt->setFetchMode(PDO::FETCH_CLASS, get_called_class());

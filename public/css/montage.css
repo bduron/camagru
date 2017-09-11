@@ -20,7 +20,7 @@ h3{
 		text-align: center;
 }
 
-.container, #image-upload{
+.container, #image-upload, #user_photos{
 		max-width: 720px;
 		margin: 30px auto;
 		padding: 20px;
@@ -192,7 +192,7 @@ h3{
 		transform: rotate(15deg);
 }
 
-video, img {
+video, .app>img {
 	transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
 	-moz-transform:rotateY(180deg); /* Firefox */
@@ -209,3 +209,9 @@ video, img {
 #image-upload{
 	max-width: 360px;
 }
+
+#user_photos>img {
+	max-width: 200px;
+	margin: 10px;
+}
+

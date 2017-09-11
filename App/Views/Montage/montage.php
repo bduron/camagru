@@ -11,7 +11,6 @@
 
 	<h1>Take a new picture</h1>
 
-
 	<div class="container">
 		<div class="app">
 
@@ -48,6 +47,15 @@
 		-->
 	<div id="image-upload">
 		<input type="file" id="image-loader" name="image-loader" accept="image/*" onchange="loadFile(event)"/>
+	</div>
+	<div id="user_photos">
+
+		<?php if ($gallery_photos): ?>	
+		<?php foreach ($gallery_photos as $photo): ?>
+				<img src="uploads/<?= $photo['src'] ?>">
+			<?php endforeach; ?>
+		<?php endif; ?>	
+
 	</div>
 
 	<?php require 'App/Views/Partials/footer.php'; ?>
