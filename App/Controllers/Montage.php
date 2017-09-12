@@ -32,13 +32,16 @@ class Montage extends Authenticated
 
 	public function deleteAction()
 	{
-		$id = Image::getIdFromName(basename($_POST['src']));
-		echo $id;
+		var_dump($_POST);
+
+		echo $_POST['src'];
+		$id = Image::getIdFromName($_POST['src']);
+		print_r($id);
 			
-		if (Image::isUserPhoto($id))
+		if (Image::isUserPhoto($id['id']))
 		{
-			Image::deletePhoto($id);
-			unlink(getcwd() . $_POST['src']);
+			Image::deletePhoto($id['id']);
+			unlink(getcwd() . '/uploads/' . $_POST['src']);
 		}
 	}
 

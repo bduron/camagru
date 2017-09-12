@@ -51,7 +51,7 @@
 	<div id="user_photos">
 
 		<?php if ($gallery_photos): ?>	
-		<?php foreach ($gallery_photos as $photo): ?>
+			<?php foreach ($gallery_photos as $photo): ?>
 				<img src="uploads/<?= $photo['src'] ?>">
 			<?php endforeach; ?>
 		<?php endif; ?>	

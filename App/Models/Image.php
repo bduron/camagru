@@ -51,12 +51,10 @@ class Image extends \Core\Model
 			$name = preg_replace("/[^A-Z0-9._-]/i", "_", $photo["name"]);
 
 			// don't overwrite an existing file
-			$i = 0;
 			$parts = pathinfo($name);
 			while (file_exists(UPLOAD_DIR . $name))
 			{
-				$i++;
-				$name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
+				$name = $parts["filename"] . "-" . uniqid() . "." . $parts["extension"];
 			}
 			$_FILES['photo']['tmp_name'] = UPLOAD_DIR . $name;
 
@@ -114,7 +112,7 @@ class Image extends \Core\Model
 	{
 		$user = Auth::getUser();
 	
-		$sql = "SELECT src FROM images WHERE user_id= :user_id ORDER BY created_at DESC;";
+		$sql = "SELECT src, id FROM images WHERE user_id= :user_id ORDER BY created_at ASC;";
 		$db = static::getDB();
 
 		$stmt = $db->prepare($sql);
@@ -123,14 +121,25 @@ class Image extends \Core\Model
 
 		return $stmt->fetchAll();	
 	}
-	
-	public static function getIdFromName($name)
+
+	public static function getAllPhotos()
 	{
-		$sql = "SELECT id FROM images WHERE name = :name;";
+		$sql = "SELECT * FROM images ORDER BY created_at DESC;";
 		$db = static::getDB();
 
 		$stmt = $db->prepare($sql);
-		$stmt->bindvalue(':name', $name, PDO::PARAM_STR); // Si doublon dans name image = probleme
+		$stmt->execute();	
+
+		return $stmt->fetchAll();	
+	}
+	
+	public static function getIdFromName($name)
+	{
+		$sql = "SELECT id FROM images WHERE src = :name;";
+		$db = static::getDB();
+
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':name', $name, PDO::PARAM_STR); 
 		$stmt->execute();	
 
 		return $stmt->fetch();	
@@ -153,7 +162,7 @@ class Image extends \Core\Model
 
 	public static function deletePhoto($id)
 	{
-		$sql = "DELETE from images WHERE user_id = :id;";
+		$sql = "DELETE from images WHERE id = :id;";
 		$db = static::getDB();
 
 		$stmt = $db->prepare($sql);

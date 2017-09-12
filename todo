@@ -2,10 +2,14 @@
 
 ## Montage
 
-today 
-[ ] finaliser la requete ajax pour la suppression de la photo + delete le node de l'img supprimée 
+Tomorrow
+[ ] Barre header a faire
+[ ] Photo cards to improve 
+[ ] setup comments 
+[ ] setup likes 
 
 
+[x] finaliser la requete ajax pour la suppression de la photo + delete le node de l'img supprimée 
 [x] trouver pourquoi on peut appuyer 2x sur le bouton snap
 
 Upload manuel

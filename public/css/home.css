@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+}
+
+html{
+		background-color: #fafafa;
+		font:normal 16px/1.5 sans-serif;
+		color: #333;
+}
+
+.container {
+	max-width: 640px;
+	margin: 30px auto;
+	background-color: #ffffff;
+	border: 1px solid #e6e6e6;
+	border-radius: 3px;
+}
+
+.header {
+	padding: 20px;
+}
+
+.comments {
+	padding: 20px;
+}
+
+.write {
+	border-top: 1px solid #efefef;
+	padding-top: 20px;
+	margin-top: 15px;
+}
+
+.like {
+	padding-bottom: 12px;
+}
+
+.time {
+	float: right;	
+	font-size: 12px;
+	color: #999;
+}
+
+.com {
+	padding-bottom: 5px;
+}
+
+textarea {
+	background: 0 0;
+	border: none;
+	color: #262626;
+	font-size: inherit;
+	outline: none;
+	padding: 0;
+	resize: none;
+	max-height: 80px;
+	height: 18px;
+	width: 100%;
+	font-size: 15px;
+}
+
+img {
+	width: 100%;
+
+}
+

@@ -13,7 +13,7 @@ var video = document.querySelector('#camera-stream'),
 	default_filter = document.querySelector('.filter>img'),
 	overlay_filter = document.querySelector('#overlay-filter'),
     image_loader = document.querySelector('#image-loader'),
-	gallery_photo = document.querySelector('#user_photos>img'),
+	gallery_photo = document.querySelector('#user_photos'),
 	current_blob = 0;
 
 
@@ -117,14 +117,13 @@ download_photo_btn.addEventListener("click", function(e) {
 		{
 			alert('Photo uploaded to the server');
 			var img_src = request.responseText;
-			console.log(img_src); // Debug 
+			console.log("img src = " + img_src); // Debug 
 			
 			var img_to_add = document.createElement("img");
 			img_to_add.src = img_src;
 
 			var img_dest = document.querySelector('#user_photos');
 			img_dest.appendChild(img_to_add);
-
 
 		}
 		else 
@@ -180,27 +179,38 @@ filters.addEventListener("click", function(e){
 });
 
 
-
+// DELETE gallery photos when clicking on them 
 gallery_photo.addEventListener("click", function(e){
 
 	e.preventDefault();
-	alert(e.target.src);		
-
-	// Set up Ajax request 
-	var request = new XMLHttpRequest();
 	
-	// Open the connection
-	request.open('POST', 'montage/delete', true);
+	if (e.target.nodeName == 'IMG')
+	{
+		alert(e.target.src);		
+			
+		// Set up Ajax request 
+		var request = new XMLHttpRequest();
+		
+		// Open the connection
+		request.open('POST', 'montage/delete', true);
+		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-	request.onload = function () {
-		if (request.status === 200) 
-		{
-			alert('Photo deleted');
-			console.log(request.responseText);
+		request.onload = function () {
+			if (request.status === 200) 
+			{
+//				alert('Photo deleted');
+				console.log(request.responseText);
+			}
+			else 
+			{
+				alert('An error occurred!');
+				console.log(request.responseText);
+			}
 		}
-		else 
-			alert('An error occurred!');
-	request.send('src=photo-62');
+		var name = 'src=' + e.target.src.split('/')[4];
+//		console.log(name);
+		request.send(name);
+		e.target.remove();
 	}
 
 });

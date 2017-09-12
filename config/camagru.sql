@@ -21,6 +21,18 @@ CREATE TABLE `users` (
   `password_hash` varchar(255) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL,
+  `src` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `remembered_logins`
   ADD PRIMARY KEY (`token_hash`),
