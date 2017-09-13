@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
+
+
 html{
 		background-color: #fafafa;
 		font:normal 16px/1.5 sans-serif;
@@ -52,6 +54,7 @@ h2 {
 .menu-items {
     display: inline-block;
 	float: right;
+	margin: 0;
 }
 
 .menu-items li {

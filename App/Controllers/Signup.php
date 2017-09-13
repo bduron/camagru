@@ -18,6 +18,7 @@ class Signup extends \Core\Controller
 		$user = new User($_POST);
 		if ($user->save())
 		{
+			// echo "<script>alert(". print_r($user) .");</script>";
 			$user->sendActivationEmail();
 			$this->redirect('/signup/success');
 		}
