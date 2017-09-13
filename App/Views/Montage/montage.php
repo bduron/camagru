@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<?php require 'App/Views/Partials/header.php'; ?>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/public/css/montage.css">
 	<title>Take a picture</title>
 </head
@@ -9,7 +10,6 @@
 	<?php require 'App/Views/Partials/nav.php'; ?>
 	<?php require 'App/Views/Partials/flash.php'; ?>
 
-	<h1>Take a new picture</h1>
 
 	<div class="container">
 		<div class="app">
@@ -46,7 +46,8 @@
 		</form>
 		-->
 	<div id="image-upload">
-		<input type="file" id="image-loader" name="image-loader" accept="image/*" onchange="loadFile(event)"/>
+		<p><i class="material-icons">cloud_upload</i> &nbsp &nbsp<input type="file" id="image-loader" name="image-loader" accept="image/*" onchange="loadFile(event)"/> </p>
+		
 	</div>
 	<div id="user_photos">
 

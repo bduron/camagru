@@ -1,15 +1,24 @@
 <?php use \App\Auth; ?>
 
 <?php if (Auth::isLoggedIn()): ?>
-	<nav>
-	     <a href="/">home</a> | 
-	     <a href="/montage">+ new picture</a> |
-	     <a href="/logout">logout</a>
+	<nav class="navbar">
+		<div class="menu">
+			<a id="logo" href="/">camagru</a>
+			<ul class="menu-items">
+				<li><a href="/montage">+ new picture</a></li>
+				<li><a href="/logout" id="logout"><i class="material-icons">power_settings_new</i></a></li>
+			</ul>
+		</div>
 	</nav>
 <?php  else: ?>
-	<nav>
-	     <a href="/">home</a> | 
-	     <a href="/signup/new">sign up</a> |
-	     <a href="/login">log in</a>
+	<nav class="navbar">
+		<div class="menu">
+			<a id="logo" href="/">camagru</a>
+			<ul class="menu-items">
+				<li><a href="/signup/new">sign up</a></li>
+				<li><a href="/login">log in</a></li>
+			</ul>
+		</div>
 	</nav>
 <?php  endif; ?>
+<div class="topmargin"></div>

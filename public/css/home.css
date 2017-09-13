@@ -7,11 +7,6 @@
 		padding: 0;
 }
 
-html{
-		background-color: #fafafa;
-		font:normal 16px/1.5 sans-serif;
-		color: #333;
-}
 
 .container {
 	max-width: 640px;

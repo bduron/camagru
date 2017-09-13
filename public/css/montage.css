@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/icon?family=material+icons');
 
@@ -8,7 +9,6 @@
 }
 
 html{
-		background-color: #fff;
 		font:normal 16px/1.5 sans-serif;
 		color: #333;
 }
@@ -24,7 +24,8 @@ h3{
 		max-width: 720px;
 		margin: 30px auto;
 		padding: 20px;
-		background-color: #efefef;
+		background-color: #ffffff;
+    	border: 1px solid #e6e6e6;
 }
 
 .app{
@@ -179,7 +180,7 @@ h3{
 }
 
 .selected-filter {
-	background-color: white;
+	background-color: greenyellow;
 }
 
 
@@ -213,5 +214,13 @@ video, .app>img {
 #user_photos>img {
 	max-width: 200px;
 	margin: 10px;
+}
+
+#image-loader {
+	padding-top: 5px;
+}
+
+#image-upload > p {
+	display: flex;
 }
 

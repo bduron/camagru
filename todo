@@ -15,6 +15,10 @@ Tomorrow
 Upload manuel
 [x] ajouter l'upload dans le html 
 [ ] valider les images uploadées
+	[ ] size max 1 mo 
+	[ ] white list jpeg, jpg, png 
+	[ ] renommer l'img uploadé ajouter l\'extension
+	[ ] 
 [ ] resizer les images 
 
 Preview 
