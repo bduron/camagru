@@ -28,12 +28,17 @@
 									<p><i class="material-icons">favorite_border</i>  19 likes <span class="time">2 DAYS AGO</span></p>
 								</div>
 								<div class="coms">
-									<p class="com"><b>moneytime</b> Trop belle photoooo 😍</p>
+									<?php foreach ($comments->getComments($photo['id']) as $comment): ?>		
+										<p class="com"><b>JOIN SQL</b> <?= $comment['comment'] ?> </p>
+									<?php endforeach; ?>
 									<p class="com"><b>justiceantlr</b> Green juice venmo readymade heirloom shabby chic, four loko.</p>
 								</div>
 								<div class="write">
-									<form action="">
-										<textarea id="" name="" cols="30" rows="10" placeholder="Write your comment" ></textarea>
+									<form class="comment-form" action="">
+										<textarea class="form-text" id="" name="" cols="30" rows="10" placeholder="Write your comment" ></textarea>
+										<input type="hidden" name="image_id" value="<?= $photo['id'] ?>">
+										<input type="hidden" name="user_id" value="<?= $user->id ?>">
+										<button class="form-button" name="form-button" type="submit">Submit</button>
 									</form>
 								</div>
 							</div>
@@ -43,6 +48,9 @@
 				<?php endforeach; ?>
 			<?php endif; ?>
 		</div>
+	</div>
+	<div class="current-user">
+		<?= $user->name ?>
 	</div>
 
 	<?php require 'App/Views/Partials/footer.php'; ?>

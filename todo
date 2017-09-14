@@ -2,24 +2,29 @@
 
 ## Montage
 
-Tomorrow
-[ ] Barre header a faire
-[ ] Photo cards to improve 
+
+
+
+[ ] emoji unicode commentaires
+[ ] infinite scroll
 [ ] setup comments 
 [ ] setup likes 
-
-
-[x] finaliser la requete ajax pour la suppression de la photo + delete le node de l'img supprimée 
-[x] trouver pourquoi on peut appuyer 2x sur le bouton snap
-
-Upload manuel
-[x] ajouter l'upload dans le html 
 [ ] valider les images uploadées
 	[ ] size max 1 mo 
 	[ ] white list jpeg, jpg, png 
 	[ ] renommer l'img uploadé ajouter l\'extension
 	[ ] 
 [ ] resizer les images 
+
+
+
+[x] Barre header a faire
+[x] Photo cards to improve 
+[x] finaliser la requete ajax pour la suppression de la photo + delete le node de l'img supprimée 
+[x] trouver pourquoi on peut appuyer 2x sur le bouton snap
+
+Upload manuel
+[x] ajouter l'upload dans le html 
 
 Preview 
 [x] selection des filtres en JS
@@ -29,7 +34,7 @@ Validation photo
 [x] envoi du filtre
 [x] montage filtre + photo
 [x] enregistrement photo dans BDD user 
-[ ] mise a jour de la galerie des photos prises  
+[x] mise a jour de la galerie des photos prises  
 
 
 
