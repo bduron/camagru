@@ -35,7 +35,10 @@ class Comment extends \Core\Model
 
 	public function getComments($image_id)
 	{
-		$sql = "SELECT comment FROM comments WHERE img_id = :image_id"; 
+		$sql = "SELECT comments.comment, users.name, comments.created_at
+				FROM comments INNER JOIN users ON comments.user_id = users.id 
+				WHERE img_id = :image_id 
+				ORDER BY comments.created_at ASC"; 
 
 		$db = static::getDB();
 		$stmt = $db->prepare($sql);

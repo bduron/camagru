@@ -1,3 +1,3 @@
-<div class="footer"><br><p>Made with love by bduron</p></div>
+<div class="footer"><br><p>Made by bduron @42</p></div>
 
 

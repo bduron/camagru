@@ -199,11 +199,16 @@ video, .app>img {
 	-moz-transform:rotateY(180deg); /* Firefox */
 }
 
+.filter {
+	white-space: nowrap;
+    overflow: auto;
+}
+
 .filter>img {
 	margin-top: 25px;
 	margin-right: 4px;
 	padding: 4px;
-	width: 7%;
+	width: 48px;
 	border-radius: 100%;
 }
 

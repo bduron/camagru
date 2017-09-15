@@ -124,7 +124,7 @@ class Image extends \Core\Model
 
 	public static function getAllPhotos()
 	{
-		$sql = "SELECT * FROM images ORDER BY created_at DESC;";
+		$sql = "SELECT images.*, users.name FROM images INNER JOIN users ON images.user_id = users.id ORDER BY created_at DESC;";
 		$db = static::getDB();
 
 		$stmt = $db->prepare($sql);

@@ -17,7 +17,7 @@
 					<div class="container">
 						<div class="card">
 							<div class="header">
-								<p><b>benjaminduron</b></p>
+							<p><b><?= h($photo['name']) ?></b></p>
 								<p>France, Paris</p>
 							</div>
 							<div class="photo">
@@ -25,14 +25,14 @@
 							</div>
 							<div class="comments">
 								<div class="like">
-									<p><i class="material-icons">favorite_border</i>  19 likes <span class="time">2 DAYS AGO</span></p>
+									<p><i class="material-icons">favorite_border</i>  19 likes <span class="time"></span></p>
 								</div>
 								<div class="coms">
 									<?php foreach ($comments->getComments($photo['id']) as $comment): ?>		
-										<p class="com"><b>JOIN SQL</b> <?= $comment['comment'] ?> </p>
+										<p class="com"><b> <?= h($comment['name']) ?>  </b> <?= h($comment['comment']) ?> </p>
 									<?php endforeach; ?>
-									<p class="com"><b>justiceantlr</b> Green juice venmo readymade heirloom shabby chic, four loko.</p>
 								</div>
+							<?php if ($user): ?>
 								<div class="write">
 									<form class="comment-form" action="">
 										<textarea class="form-text" id="" name="" cols="30" rows="10" placeholder="Write your comment" ></textarea>
@@ -41,6 +41,13 @@
 										<button class="form-button" name="form-button" type="submit">Submit</button>
 									</form>
 								</div>
+							<?php else: ?>
+								<div class="write">
+									<form class="comment-form" action="">
+										<textarea class="form-text" id="" name="" cols="30" rows="10" placeholder="Write your comment (log in to comment)" disabled></textarea>
+									</form>
+								</div>
+							<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -49,9 +56,11 @@
 			<?php endif; ?>
 		</div>
 	</div>
+<?php if ($user): ?>
 	<div class="current-user">
 		<?= $user->name ?>
 	</div>
+<?php endif; ?>
 
 	<?php require 'App/Views/Partials/footer.php'; ?>
 </body>
