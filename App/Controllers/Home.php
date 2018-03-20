@@ -14,10 +14,16 @@ class Home extends \Core\Controller
 	
 	public function indexAction()
 	{
-		Like::getAllLikes();
-		View::render('Home/index.php', ['user' => Auth::getUser(), 
-										'photos' => Image::getAllPhotos(),
-										'comments' => new Comment() ]);
+		echo '<pre>';
+		print_r(Like::getAllLikes());
+		echo '</pre>';
+		View::render('Home/index.php', [
+			'user' => Auth::getUser(), 
+			'photos' => Image::getAllPhotos(),
+			'comments' => new Comment() ,
+			'allLikes' => Like::getAllLikes(),
+			'userLikes' => Like::getUserLikes() 
+		]);
 	}
 
 

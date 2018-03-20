@@ -17,7 +17,7 @@ class Like extends \Core\Model
 	
 	public static function isLiked($imageId)
 	{
-		$sql = "SELECT * FROM likes WHERE user_id = :user_id AND image_id = :image_id;"
+		$sql = "SELECT * FROM likes WHERE user_id = :user_id AND image_id = :image_id;";
 
 		$db = static::getDB();
 		$stmt = $db->prepare($sql);
@@ -35,7 +35,7 @@ class Like extends \Core\Model
 		$sql = "INSERT INTO likes (user_id, image_id)
 				VALUES (:user_id, :image_id)";
 
-		if ($this::isLiked($imageId))
+		if (Like::isLiked($imageId))
 			return false;
 
 		$db = static::getDB();
@@ -47,7 +47,7 @@ class Like extends \Core\Model
 		return $stmt->execute();
 	}
 
-	public function remove($imageId)
+	public static function remove($imageId)
 	{
 		$sql = "DELETE FROM likes WHERE image_id = :image_id AND user_id = :user_id;";
 
@@ -55,7 +55,7 @@ class Like extends \Core\Model
 		$stmt = $db->prepare($sql);
 
 		$stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
-		$stmt->bindValue(':image_id', $image_id, PDO::PARAM_STR);
+		$stmt->bindValue(':image_id', $imageId, PDO::PARAM_STR);
 		return $stmt->execute();
 	}
 
@@ -84,23 +84,17 @@ class Like extends \Core\Model
 	
 	public static function getUserLikes()
 	{
-		$user_id = $_SESSION['user_id'];
-		$sql = "SELECT * FROM likes WHERE ";
+		$sql = "SELECT * FROM likes WHERE user_id = :user_id";
 		$likes = [];
 		
 		$db = static::getDB();
 		$stmt = $db->prepare($sql);
+		$stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
 		$stmt->execute();
 		$likes_raw = $stmt->fetchAll(); 
 
-		/* Count likes for each image */
 		forEach ($likes_raw as $like) 
-		{
-			if (!ISSET($likes[$like['image_id']]))
-				$likes[$like['image_id']] = 1; 		
-			else 
-				$likes[$like['image_id']] += 1; 		
-		}
+			$likes[$like['image_id']] = true; 		
 
 		return $likes;	
 	}

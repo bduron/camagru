@@ -20,13 +20,22 @@
 							<p><b><?= h($photo['name']) ?></b></p>
 								<p>France, Paris</p>
 							</div>
-							<div class="photo">
+							<div class="photo" id="<?= $photo['id'] ?>">
 								<img src="<?= 'uploads/' . $photo['src'] ?>" alt="">
 							</div>
 							<div class="comments">
+
 								<div class="like">
-									<p><i class="material-icons">favorite_border</i>  19 likes <span class="time"></span></p>
+									<?php if (ISSET($userLikes[$photo['id']])): ?>
+									<p><i class="material-icons">favorite</i>  <?= $allLikes[$photo['id']]?> likes <span class="time"></span></p>
+									<?php else: ?>
+										<p>
+											<i class="material-icons">favorite_border</i>  
+											<?= ISSET($allLikes[$photo['id']]) ? $allLikes[$photo['id']] : 0 ?> likes <span class="time"></span>
+										</p>
+									<?php endif; ?>
 								</div>
+
 								<div class="coms">
 									<?php foreach ($comments->getComments($photo['id']) as $comment): ?>		
 										<p class="com"><b> <?= h($comment['name']) ?>  </b> <?= h($comment['comment']) ?> </p>
