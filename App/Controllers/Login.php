@@ -17,13 +17,15 @@ class Login extends \Core\Controller
 
 	public function createAction()
 	{
+		
 		$user = User::authenticate($_POST['name'], $_POST['password']);
 		$remember_me = (isset($_POST['remember_me'])) ? "checked=\"checked\"" : "";
-
+		
 		if ($user)
 		{		
 			Auth::login($user, $remember_me);
 			Flash::addMessage('Login successful');	
+		echo 'ok';
 			$this->redirect(Auth::getReturnToPage());
 		}
 		else 
