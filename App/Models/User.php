@@ -5,6 +5,7 @@ namespace App\Models;
 use PDO;
 use \App\Token;
 use \App\Mail;
+use \App\Models\User;
 
 class User extends \Core\Model
 {
@@ -15,6 +16,57 @@ class User extends \Core\Model
 	{
 		foreach ($data as $key => $value)
 			$this->$key = $value;
+	}
+
+	public function updateProfile($data)
+	{
+		foreach ($data as $key => $value)
+			$this->$key = $value;
+
+		$this->validateProfile();
+
+		if (empty($this->errors))
+		{		
+			$sql = "UPDATE users
+					SET name = :name, email = :email
+					WHERE id = :id";
+
+			$db = static::getDB();
+			$stmt = $db->prepare($sql);
+
+			$stmt->bindValue(':name', $this->name, PDO::PARAM_STR);
+			$stmt->bindValue(':email', $this->email, PDO::PARAM_STR);
+			$stmt->bindValue(':id', $_SESSION['user_id'], PDO::PARAM_INT);
+
+			return $stmt->execute();
+		}
+		return false;
+	}
+
+	public function updatePassword($data)
+	{
+		foreach ($data as $key => $value)
+			$this->$key = $value;
+
+		$this->validatePassword();
+
+		$password_hash = password_hash($this->password, PASSWORD_DEFAULT);
+
+		if (empty($this->errors))
+		{		
+			$sql = "UPDATE users
+					SET password_hash = :password_hash
+					WHERE id = :id";
+
+			$db = static::getDB();
+			$stmt = $db->prepare($sql);
+
+			$stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
+			$stmt->bindValue(':id', $_SESSION['user_id'], PDO::PARAM_INT);
+
+			return $stmt->execute();
+		}
+		return false;
 	}
 
 	public function save()
@@ -45,13 +97,23 @@ class User extends \Core\Model
 		return false;
 	}
 
+
 	public function validate()
+	{
+		$this->validateProfile();
+		$this->validatePassword();
+	}			
+
+	public function validateProfile()
 	{
 		if ($this->name == '')
 			$this->errors[] = "Name is required";	
 
 		if (strlen($this->name) > 50 )
 			$this->errors[] = "Username must be less than 50 characters";	
+
+		if (strlen($this->name) < 6 )
+			$this->errors[] = "Username must be at least 6 characters";	
 
 		if ($this->nameExists($this->name, $this->id ?? null))
 			$this->errors[]	= "This name is already taken";
@@ -61,7 +123,10 @@ class User extends \Core\Model
 
 		if (static::emailExists($this->email, $this->id ?? null))
 			$this->errors[]	= "This email is already registered";
+	}			
 
+	public function validatePassword()
+	{
 		if (strlen($this->password) < 6)
 			$this->errors[]	= "Please enter at least 6 characters for the password";
 

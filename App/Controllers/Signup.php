@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use \Core\View;
 use \App\Models\User;
+use \App\Flash;
 
 class Signup extends \Core\Controller
 {
@@ -16,14 +17,18 @@ class Signup extends \Core\Controller
 	public function createAction()
 	{
 		$user = new User($_POST);
+	
 		if ($user->save())
 		{
-			// echo "<script>alert(". print_r($user) .");</script>";
 			$user->sendActivationEmail();
 			$this->redirect('/signup/success');
 		}
 		else 
+		{  	
+			foreach ($user->errors as $error)
+				Flash::addMessage($error, 'warning');	
 			View::render('Signup/new.php', ['user' => $user]);
+		}
 	}
 
 	public function successAction()

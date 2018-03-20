@@ -1,6 +1,6 @@
 window.onload = function() {
 
-	var alert_box = document.querySelector('.alert'),
+	var alerts = document.querySelectorAll('.alert'),
 		comment_form = document.querySelectorAll('.comment-form'), 
 		form_text = document.querySelectorAll('.form-text');
 		
@@ -27,7 +27,7 @@ window.onload = function() {
 
 				var request = new XMLHttpRequest();
 				
-				request.open('POST', 'home/save', true);
+				request.open('POST', 'comments/add', true);
 				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 				request.onload = function () {
@@ -41,8 +41,8 @@ window.onload = function() {
 				}
 
 				var data = 	'comment=' + e.target.elements[0].value
-							+ '&image_id=' + e.target.elements[1].value
-							+ '&user_id=' + e.target.elements[2].value;
+							+ '&image_id=' + e.target.elements[1].value;
+				//	+ '&user_id=' + e.target.elements[2].value;
 
 				request.send(data);
 
@@ -66,17 +66,16 @@ window.onload = function() {
 		});
 	}
 
-
-	if (alert_box)
-	{	
-		alert_box.addEventListener("click", function(e){
-
-			e.preventDefault();
-			if (e.target.nodeName == 'I')
-				e.target.parentNode.remove();
-		});
+	function removeFlash(e) {
+		e.preventDefault();
+		if (e.target.nodeName == 'I')
+			e.target.parentNode.remove();
 	}
 
-	
+	if (alerts) {	
+		alerts.forEach(alert => {
+			alert.addEventListener("click", removeFlash)
+		});
+	}
 
 }

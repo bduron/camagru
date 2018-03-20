@@ -170,6 +170,18 @@ class Image extends \Core\Model
 		$stmt->execute();	
 	}
 
+	public static function getOwnerId($imageId)
+	{
+		$sql = "SELECT user_id FROM images WHERE id = :image_id;";
+		$db = static::getDB();
+
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':image_id', $imageId, PDO::PARAM_STR); 
+		$stmt->execute();	
+
+		return $stmt->fetch();	
+	}
+
 }
 
 

@@ -115,7 +115,7 @@ download_photo_btn.addEventListener("click", function(e) {
 	request.onload = function () {
 		if (request.status === 200) 
 		{
-			alert('Photo uploaded to the server');
+			//alert('Photo uploaded to the server');
 			var img_src = request.responseText;
 			console.log("img src = " + img_src); // Debug 
 			

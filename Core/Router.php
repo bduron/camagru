@@ -49,7 +49,7 @@ class Router
 				$action = $this->toCamelCase($action);					
 				$controller_obj = new $controller($this->params);
 				
-				if (is_callable([$controller_obj, $action]))
+				if (is_callable([$controller_obj, $action]) && preg_match('/action$/i', $action) == 0)
 					$controller_obj->$action(); 
 				else
 					throw new \Exception('No ' . $action . ' method found in ' . $controller, 404);

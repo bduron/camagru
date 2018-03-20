@@ -1,0 +1,60 @@
+[20-Mar-2018 11:24:23 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:24:26 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:24:28 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:24:30 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:24:32 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:24:44 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:24:46 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:28 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:49 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:51 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:52 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:53 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:55 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:25:56 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61
+[20-Mar-2018 11:26:19 Europe/Paris] Uncaught exception: 'Exception' with message 'No route found for profile'
+Stack trace: #0 /Users/bduron/MAMP/apache2/htdocs/index.php(47): Core\Router->dispatch('profile')
+#1 {main}
+Thrown in '/Users/bduron/MAMP/apache2/htdocs/Core/Router.php' on line 61

@@ -8,6 +8,13 @@ SET time_zone = "+00:00";
 
 use camagru;
 
+CREATE TABLE `camagru`.`likes` ( 
+	`id` INT NOT NULL AUTO_INCREMENT , 
+	`user_id` INT NOT NULL , 
+	`image_id` INT NOT NULL , 
+	PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
+
 CREATE TABLE `remembered_logins` (
   `token_hash` varchar(64) NOT NULL,
   `user_id` int(11) NOT NULL,
