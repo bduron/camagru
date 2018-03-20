@@ -25,13 +25,16 @@
 							</div>
 							<div class="comments">
 
-								<div class="like">
+								<div class="like" id="<?= $photo['id'] ?>" >
 									<?php if (ISSET($userLikes[$photo['id']])): ?>
-									<p><i class="material-icons">favorite</i>  <?= $allLikes[$photo['id']]?> likes <span class="time"></span></p>
+										<p>
+											<i class="material-icons like-btn liked">favorite_border</i>  
+											<span class="counter"><?= $allLikes[$photo['id']]?></span> like 
+										</p>
 									<?php else: ?>
 										<p>
-											<i class="material-icons">favorite_border</i>  
-											<?= ISSET($allLikes[$photo['id']]) ? $allLikes[$photo['id']] : 0 ?> likes <span class="time"></span>
+											<i class="material-icons like-btn">favorite_border</i>  
+											<span class="counter"><?= ISSET($allLikes[$photo['id']]) ? $allLikes[$photo['id']] : 0 ?></span> like 
 										</p>
 									<?php endif; ?>
 								</div>

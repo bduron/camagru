@@ -40,6 +40,14 @@
 	display: none;
 }
 
+.like-btn {
+	cursor: pointer;
+}
+
+.liked {
+	color: red;
+}
+
 textarea {
 	background: 0 0;
 	border: none;

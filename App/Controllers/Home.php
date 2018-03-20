@@ -14,9 +14,6 @@ class Home extends \Core\Controller
 	
 	public function indexAction()
 	{
-		echo '<pre>';
-		print_r(Like::getAllLikes());
-		echo '</pre>';
 		View::render('Home/index.php', [
 			'user' => Auth::getUser(), 
 			'photos' => Image::getAllPhotos(),
