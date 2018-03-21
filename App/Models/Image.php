@@ -47,8 +47,15 @@ class Image extends \Core\Model
 				exit;
 			}
 
+			if ($photo['size'] > 2000000)
+			{
+				echo "<p>File is to big, please upload an image < 2mo.</p>";
+				exit;
+			}
+
 			// ensure a safe filename
 			$name = preg_replace("/[^A-Z0-9._-]/i", "_", $photo["name"]);
+			$name = preg_replace("/\..+$/i", ".png", $name);
 
 			// don't overwrite an existing file
 			$parts = pathinfo($name);
@@ -78,10 +85,24 @@ class Image extends \Core\Model
 	private static function addFilter()
 	{
 		define("FILTER_DIR", getcwd() . "/public/img/");
+		$file = $_FILES['photo']['tmp_name'];
 
 		// Load the filter and the photo to apply the watermark to
 		$filter = imagecreatefrompng(FILTER_DIR . $_POST['filter_id']);
-		$im = imagecreatefrompng($_FILES['photo']['tmp_name']);
+		switch (mime_content_type($file)) {
+			case 'image/png':
+				$im = imagecreatefrompng($file);
+				break;
+			case 'image/gif':
+				$im = imagecreatefromgif($file);
+				break;
+			case 'image/jpeg':
+			case 'image/jpg':	
+				$im = imagecreatefromjpeg($file);
+				break;
+			default:
+				return false;	
+		}
 
 		$filter = imagescale($filter, 140);	
 		imagealphablending($filter, false);

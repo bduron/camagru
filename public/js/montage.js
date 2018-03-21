@@ -221,6 +221,8 @@ var loadFile = function(event) {
 	{
 		var output = document.getElementById('snap');
 		current_blob = event.target.files[0];
+
+
 		output.src = URL.createObjectURL(event.target.files[0]);
 
 		output.classList.add("visible");
@@ -295,5 +297,6 @@ function hideUI(){
 		snap.classList.remove("visible");
 		error_message.classList.remove("visible");
 }
+
 
 
