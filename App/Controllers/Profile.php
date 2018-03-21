@@ -15,6 +15,22 @@ class Profile extends Authenticated
 		View::render('Profile/index.php', ['user' => Auth::getUser()]);
 	}
 
+	public function updateNotificationsAction()
+	{
+		$user = Auth::getUser();
+
+		if ($user->updateNotifications($_POST['notifications']))
+		{
+			Flash::addMessage('Notifications preferences updated successfully');	
+			$this->redirect('/profile');
+		}
+		else 
+		{
+			foreach ($user->errors as $error)
+				Flash::addMessage($error, 'warning');	
+			View::render('Profile/index.php', ['user' => $user]);
+		}
+	}
 
 	public function updateProfileAction()
 	{

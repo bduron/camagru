@@ -37,6 +37,26 @@
 		</form>
 	</div>
 
+	<div class="signup form-box">
+		<form method="post" action="/profile/update-notifications">
+			<p>Would you like to be notified when someone comments your photos?</p>
+			<br>
+			  <div>
+				<input type="radio" id="yes"
+				name="notifications" value="1" <?= $user->notifications ? 'checked' : '' ?> >
+				<label for="yes">Yes</label>
+
+				<input type="radio" id="no"
+				 name="notifications" value="0" <?= $user->notifications ? '' : 'checked' ?> > 
+				<label for="no">No</label>
+
+			  </div>
+			  <div>
+				<button class="form-button" type="submit">Update preferences</button>
+			  </div>
+		</form>
+	</div>
+
 	<?php require 'App/Views/Partials/footer.php'; ?>
 </body>
 </html>

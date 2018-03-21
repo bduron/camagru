@@ -122,9 +122,34 @@ class Image extends \Core\Model
 		return $stmt->fetchAll();	
 	}
 
+	public static function getFivePhotos($last_id)
+	{
+		$sql = "
+			SELECT images.*, users.name 
+			FROM images 
+			INNER JOIN users ON images.user_id = users.id 
+			WHERE images.id < :last_id
+			ORDER BY created_at DESC
+			LIMIT 5;
+		";
+		$db = static::getDB();
+
+		$stmt = $db->prepare($sql);
+		$stmt->bindvalue(':last_id', $last_id, PDO::PARAM_INT);
+		$stmt->execute();	
+
+		return $stmt->fetchAll();	
+	}
+
 	public static function getAllPhotos()
 	{
-		$sql = "SELECT images.*, users.name FROM images INNER JOIN users ON images.user_id = users.id ORDER BY created_at DESC;";
+		$sql = "
+			SELECT images.*, users.name 
+			FROM images 
+			INNER JOIN users ON images.user_id = users.id 
+			ORDER BY created_at DESC
+			LIMIT 5;
+		";
 		$db = static::getDB();
 
 		$stmt = $db->prepare($sql);

@@ -15,7 +15,7 @@ class View
 			require $file;
 		}
 		else
-			throw new Exception("File : $file not found");	
+			throw new \Exception("File : $file not found");	
 	}
 }
 

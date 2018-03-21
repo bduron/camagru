@@ -8,6 +8,7 @@ SET time_zone = "+00:00";
 
 use camagru;
 
+
 CREATE TABLE `camagru`.`likes` ( 
 	`id` INT NOT NULL AUTO_INCREMENT , 
 	`user_id` INT NOT NULL , 
@@ -33,6 +34,14 @@ CREATE TABLE `images` (
   `src` varchar(255) NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `comments` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `img_id` int(11) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `comment` varchar(21800) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `images`
@@ -63,13 +72,6 @@ ALTER TABLE `users`
 	ADD `is_active` BOOLEAN NOT NULL DEFAULT FALSE AFTER `activation_hash`, 
 	ADD UNIQUE (`activation_hash`);
 
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `img_id` int(11) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `comment` varchar(21800) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`);
@@ -77,6 +79,7 @@ ALTER TABLE `comments`
 ALTER TABLE `comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
+ALTER TABLE `users` ADD `notifications` BOOLEAN NOT NULL DEFAULT TRUE AFTER `is_active`;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

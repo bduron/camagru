@@ -2,10 +2,71 @@ window.onload = function() {
 
 	var alerts = document.querySelectorAll('.alert'),
 		comment_form = document.querySelectorAll('.comment-form'), 
-		form_text = document.querySelectorAll('.form-text');
-		like_buttons = document.querySelectorAll('.like-btn');
+		form_text = document.querySelectorAll('.form-text'),
+		like_buttons = document.querySelectorAll('.like-btn'),
+		current_user = document.querySelector('.current-user');
 
 		
+	/****************************  INFINITE SCROLL FUNCTION  ********************************/
+
+	function photoAjax() {
+
+		/* Get last photo index */
+		let photos = document.querySelectorAll('.photo');
+		let last_id = photos[photos.length - 1].id;
+		var data = `last_id=${last_id}`;
+
+		var request = new XMLHttpRequest();
+
+		request.open('GET', `home/get-photos?${data}`, true);
+		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+		request.onload = function () {
+			if (request.status === 200) { 
+				let photosElem = document.querySelector('#user_photos');
+				photosElem.innerHTML = photosElem.innerHTML + request.responseText;
+				//console.log(request.responseText);
+
+			} else 
+				console.log('An error occurred!');
+		}
+
+		request.send(null);
+	}
+
+	function debounce(func, wait = 100) {
+		let timeout;
+		return function(...args) {
+			clearTimeout(timeout);
+			timeout = setTimeout(() => {
+				func.apply(this, args);
+			}, wait);
+		};
+	}
+
+	function getDistFromBottom () {
+
+		console.log('called');	
+
+		var scrollPosition = window.pageYOffset;
+		var windowSize     = window.innerHeight;
+		var bodyHeight     = document.body.offsetHeight;
+
+		const res = Math.max(bodyHeight - (scrollPosition + windowSize), 0);
+
+		if (res == 0) {
+			console.log('load more');
+			photoAjax();
+		}
+	}
+	
+	var debounced = debounce(getDistFromBottom, 500);
+
+	window.addEventListener('scroll', function() {
+		debounced();
+	});
+
+
 	/****************************  LIKES FUNCTION  ********************************/
 
 	
@@ -17,12 +78,9 @@ window.onload = function() {
 
 		request.onload = function () {
 			if (request.status === 200) 
-				console.log(request.responseText);
+				console.log(`like ${action} request sent `);
 			else 
-			{
-				alert('An error occurred!');
-				console.log(request.responseText);
-			}
+				console.log('An error occurred!');
 		}
 
 		var data = 'image_id=' + Number(e.target.parentNode.parentNode.id);
@@ -54,18 +112,20 @@ window.onload = function() {
 
 	if (like_buttons) {
 		like_buttons.forEach(btn => {
-			btn.addEventListener("click", e => {
-				e.preventDefault();
-				if (isLiked(e)) {
-					likeAjax(e, 'remove');
-					toggleLike(e);
-					decrementLike(e);
-				} else {
-					likeAjax(e, 'add');
-					toggleLike(e);
-					incrementLike(e);
-				}
-			});	
+			if (current_user != null) {
+				btn.addEventListener("click", e => {
+					e.preventDefault();
+					if (isLiked(e)) {
+						likeAjax(e, 'remove');
+						toggleLike(e);
+						decrementLike(e);
+					} else {
+						likeAjax(e, 'add');
+						toggleLike(e);
+						incrementLike(e);
+					}
+				});
+			}
 		});
 	}
 
@@ -133,6 +193,9 @@ window.onload = function() {
 			});
 		});
 	}
+
+	
+	/****************************  FLASH FUNCTION  ********************************/
 
 	function removeFlash(e) {
 		e.preventDefault();

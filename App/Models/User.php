@@ -18,6 +18,22 @@ class User extends \Core\Model
 			$this->$key = $value;
 	}
 
+	
+	public function updateNotifications($status)
+	{
+		$sql = "UPDATE users
+				SET notifications = :notifications
+				WHERE id = :id";
+
+		$db = static::getDB();
+		$stmt = $db->prepare($sql);
+
+		$stmt->bindValue(':notifications', $status, PDO::PARAM_BOOL);
+		$stmt->bindValue(':id', $_SESSION['user_id'], PDO::PARAM_INT);
+
+		return $stmt->execute();
+	}
+
 	public function updateProfile($data)
 	{
 		foreach ($data as $key => $value)

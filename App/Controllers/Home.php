@@ -19,10 +19,21 @@ class Home extends \Core\Controller
 			'photos' => Image::getAllPhotos(),
 			'comments' => new Comment() ,
 			'allLikes' => Like::getAllLikes(),
-			'userLikes' => Like::getUserLikes() 
+			'userLikes' => Auth::isLoggedIn() ? Like::getUserLikes() : [] 
 		]);
 	}
 
+
+	public function getPhotosAction()
+	{
+		View::render('Partials/photo.php', [
+			'user' => Auth::getUser(), 
+			'photos' => Image::getFivePhotos($_GET['last_id']),
+			'comments' => new Comment() ,
+			'allLikes' => Like::getAllLikes(),
+			'userLikes' => Auth::isLoggedIn() ? Like::getUserLikes() : [] 
+		]);
+	}
 
 
 	protected function before()
